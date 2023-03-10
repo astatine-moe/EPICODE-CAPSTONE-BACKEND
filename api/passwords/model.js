@@ -1,4 +1,5 @@
 import mongoose, { Types, Schema, model } from "mongoose";
+import { encrypt, decrypt } from "../../modules/encryption";
 
 //schema for password manager
 const passwordSchema = new Schema({
@@ -36,9 +37,9 @@ const passwordSchema = new Schema({
     },
 });
 
-//TODO: encrypt password
 passwordSchema.pre("save", function (next) {
-    this.password = this.password;
+    this.password = encrypt(this.password);
+
     next();
 });
 
