@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "description": "",
     "main": "server.js",
-    "module": "main.js",
+    "type": "module",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "node server.js"
@@ -18,6 +18,9 @@
     },
     "homepage": "https://github.com/astatine-moe/EPICODE-CAPSTONE-BACKEND#readme",
     "dependencies": {
-        "esm": "^3.2.25"
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "mongoose": "^7.0.1"
     }
 }
